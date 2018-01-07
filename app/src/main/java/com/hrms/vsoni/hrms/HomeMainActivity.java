@@ -57,7 +57,7 @@ public class HomeMainActivity extends AppCompatActivity /*implements home.OnFrag
                      fragmentClass=home.class;
                    break;
                case R.id.leave_status:
-                   fragmentClass= leave_status.class;
+                   fragmentClass= Leave.class;
                    break;
                case R.id.salary:
                     fragmentClass= salary.class;
@@ -74,11 +74,10 @@ public class HomeMainActivity extends AppCompatActivity /*implements home.OnFrag
                 e.printStackTrace();
            }
 
-/*
            android.support.v4.app.FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
            ft.replace(R.id.flContent,fragment);
            ft.commit();
-*/
+
            menuItem.setChecked(true);
            // Set action bar title
            setTitle(menuItem.getTitle());
