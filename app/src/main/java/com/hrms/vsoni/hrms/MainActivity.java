@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         listOfFragments.add(LoginFragment.getInstance());
         listOfFragments.add(SignupFragment.getInstance());
 
+
         ArrayList<String> listOfTitles = new ArrayList<>();
         listOfTitles.add(getResources().getString(R.string.res_login));
         listOfTitles.add(getResources().getString(R.string.res_signup));

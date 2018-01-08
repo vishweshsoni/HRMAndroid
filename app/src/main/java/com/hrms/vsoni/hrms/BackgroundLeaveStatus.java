@@ -98,14 +98,16 @@ public class BackgroundLeaveStatus extends AsyncTask<Httpcall,String,String> {
 
                         String remaining_sick=emplJSON.getString("remaining_sick");
                         emp.setRemaining_sick(emplJSON.getString("remaining_sick"));
+
                         emp.setRemaining_casual(emplJSON.getString("remaining_casual"));
+
                         emp.setGetRemaining_privillages(emplJSON.getString("remaining_privilliges"));
                         Log.d("here",remaining_sick);
                       }
                     //total/consumed/remaining
-                    if (parent instanceof Leave){
+                    if (parent instanceof LeaveStatus){
                         ((LeaveStatus)parent).setResponse(emp);
-                    }
+                    }else {Log.i("sorry","sry");}
 
                 } catch (JSONException e) {
                     e.printStackTrace();

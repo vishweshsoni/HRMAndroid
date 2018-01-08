@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +47,7 @@ public class LeaveStatus extends Fragment implements BackgroundLeaveStatus.goBac
 
     @Override
     public void setResponse(Employee e) {
-//        Log.d("Leave status", "------->>> Ai gayu..." + e.toString());
+        Log.d("Leave status", "------->>> Ai gayu..." + e.getRemaining_sick());
         sick.setText(e.getRemaining_sick());
         casual.setText(e.getRemaining_casual());
         privillages.setText(e.getGetRemaining_privillages());
