@@ -43,7 +43,7 @@ public class BackgroundLeaveStatus extends AsyncTask<Httpcall,String,String> {
         StringBuilder response = new StringBuilder();
         try {
             String dataParams=getPostDataString(httpcall.getParams());
-            URL url=new URL("http://192.168.43.127:3000/Leave");
+            URL url=new URL("http://192.168.43.127:3000/leave_status");
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoOutput(true);
@@ -101,7 +101,8 @@ public class BackgroundLeaveStatus extends AsyncTask<Httpcall,String,String> {
                         emp.setRemaining_casual(emplJSON.getString("remaining_casual"));
                         emp.setGetRemaining_privillages(emplJSON.getString("remaining_privilliges"));
                         Log.d("here",remaining_sick);
-                    }
+                      }
+                    //total/consumed/remaining
                     if (parent instanceof Leave){
                         ((LeaveStatus)parent).setResponse(emp);
                     }

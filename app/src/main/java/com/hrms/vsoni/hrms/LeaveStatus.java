@@ -58,7 +58,7 @@ public class LeaveStatus extends Fragment implements BackgroundLeaveStatus.goBac
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-/*
+
         HashMap<String,String> params=new HashMap<>();
         params.put("emp_id","1");
 //            params.put("policy_id","STD009");
@@ -66,7 +66,7 @@ public class LeaveStatus extends Fragment implements BackgroundLeaveStatus.goBac
         httpCall.setParams(params);
         BackgroundLeaveStatus bg_ls=new BackgroundLeaveStatus(this);
         bg_ls.execute(httpCall);
-*/
+
 
 
     }

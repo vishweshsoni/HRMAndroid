@@ -18,4 +18,8 @@
         android:id="@+id/attendance"
         android:icon="@drawable/ic_accessibility_black"
         android:title="Attendance" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout"/>
 </menu>
