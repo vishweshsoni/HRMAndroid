@@ -6,17 +6,6 @@
     android:id="@+id/myDrawer"
     android:layout_height="match_parent"
     tools:context=".HomeMainActivity">
-    <!--LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-          &lt;!&ndash;<include
-            layout="@layout/toolbar"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"/>
-&ndash;&gt;
-
-    </LinearLayout>-->
 
     <FrameLayout
         android:id="@+id/flContent"

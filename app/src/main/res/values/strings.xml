@@ -12,6 +12,7 @@
     <string name="res_welcomeMsg">Welcome to HRMS!</string>
     <string name="res_leave_status">Leave Status</string>
     <string name="res_leave_applications">Leave Applications</string>
+    <string name="res_hrm">HRM</string>
     <string name="open">Open</string>
     <string name="close">close</string>
 
