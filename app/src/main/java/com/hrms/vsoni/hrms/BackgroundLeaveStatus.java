@@ -107,7 +107,7 @@ public class BackgroundLeaveStatus extends AsyncTask<Httpcall,String,String> {
                     //total/consumed/remaining
                     if (parent instanceof LeaveStatus){
                         ((LeaveStatus)parent).setResponse(emp);
-                    }else {Log.i("sorry","sry");}
+                    }else {Log.i("sorry","sry it's not the instance of the leavestatus");}
 
                 } catch (JSONException e) {
                     e.printStackTrace();
