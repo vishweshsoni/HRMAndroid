@@ -66,24 +66,32 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:clickable="true"
                 android:layout_margin="10dp">
 
                 <LinearLayout
+                    android:id="@+id/ll_leavestatus"
+                    android:clickable="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    >
 
-                    <ImageView
+                    <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/leave"/>
-                    <TextView
+                  <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Leave"/>
+                    <!-- <Button
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:text="Leave_status"
+                       android:onClick="leave_click"-->
+                             />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -91,17 +99,18 @@
             <android.support.v7.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:clickable="true"
                 android:layout_margin="10dp">
 
                 <LinearLayout
+                    android:clickable="true"
+                    android:id="@+id/ll_salary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/salary"/>
@@ -123,17 +132,18 @@
             <android.support.v7.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:clickable="true">
+                android:layout_margin="10dp">
 
                 <LinearLayout
+                    android:clickable="true"
+                    android:id="@+id/ll_about"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/about"/>
@@ -149,9 +159,10 @@
             <android.support.v7.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:clickable="true"
                 android:layout_margin="10dp">
                 <LinearLayout
+                    android:clickable="true"
+                    android:id="@+id/ll_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -181,17 +192,18 @@
             <android.support.v7.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_margin="10dp"
-                android:clickable="true">
+                android:layout_margin="10dp">
 
                 <LinearLayout
+                    android:clickable="true"
+                    android:id="@+id/ll_logout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/logout"/>
