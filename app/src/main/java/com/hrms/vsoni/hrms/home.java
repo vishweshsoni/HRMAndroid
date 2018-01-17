@@ -61,7 +61,6 @@ public class home extends Fragment{
             @Override
             public void onClick(View view) {
                 LeaveStatus leaveStatus=LeaveStatus.newInstance();
-
                 replaceFragment(leaveStatus);
 
             }
@@ -97,8 +96,10 @@ public class home extends Fragment{
         return rootView;
     }
     public void replaceFragment(Fragment someFragment) {
+
+
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.main, someFragment);
+        transaction.replace(R.id.myMain, someFragment,"Fragment").setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         transaction.addToBackStack(null);
         transaction.commit();
     }

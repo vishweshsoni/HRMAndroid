@@ -13,11 +13,11 @@ public class HomeMainActivity extends AppCompatActivity /*implements home.OnFrag
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.homemain);
-        Fragment fr=new Fragment();
-        FragmentManager manager=getSupportFragmentManager();
-        FragmentTransaction transaction=manager.beginTransaction();
-                transaction.add(R.id.main,fr);
-                transaction.commit();
+        home fragHome=home.newInstance();
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.add(R.id.myMain,fragHome);
+        transaction.commit();
 
     }
 

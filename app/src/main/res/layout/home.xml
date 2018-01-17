@@ -79,6 +79,7 @@
                     >
 
                     <ImageButton
+                        android:background="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/leave"/>
@@ -111,6 +112,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:background="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/salary"/>
@@ -144,6 +146,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:background="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/about"/>
@@ -169,7 +172,8 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
+                    <ImageButton
+                        android:background="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/profile"/>
@@ -204,6 +208,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:background="@color/white"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/logout"/>
