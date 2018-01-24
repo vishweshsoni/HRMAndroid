@@ -114,14 +114,16 @@
 -->
     <Button
         android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/res_signup"
-        android:textSize="16sp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="110dp"
+
+        android:layout_marginTop="20dp"
         android:background="@drawable/login_button_style"
-        android:layout_marginTop="10dp"
-        android:padding="7dp"
-        android:onClick="register_click"/>
+        android:onClick="register_click"
+        android:padding="7dp" />
+
+
 </LinearLayout>
 
 

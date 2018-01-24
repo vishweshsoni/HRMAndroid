@@ -43,7 +43,7 @@ public class BackgroundLeaveStatus extends AsyncTask<Httpcall,String,String> {
         StringBuilder response = new StringBuilder();
         try {
             String dataParams=getPostDataString(httpcall.getParams());
-            URL url=new URL("http://192.168.43.127:3000/Leave");
+            URL url=new URL("http://192.168.43.127:3000/leave_status");
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoOutput(true);
