@@ -1,20 +1,18 @@
 package com.hrms.vsoni.hrms;
 
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerViewAccessibilityDelegate;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.time.Month;
 import java.util.List;
 
 /**
  * Created by vishwesh on 23/1/18.
  */
 
-public class Salary_Adapter extends RecyclerView.Adapter<Salary_Adapter.MyViewHolder> {
+public class SalaryAdapter extends RecyclerView.Adapter<SalaryAdapter.MyViewHolder> {
     private List<SalaryBin> salryList;
     public class MyViewHolder extends RecyclerView.ViewHolder{
         public TextView month,rupees,year;
@@ -28,7 +26,7 @@ public class Salary_Adapter extends RecyclerView.Adapter<Salary_Adapter.MyViewHo
         }
     }
 
-    public Salary_Adapter(List<SalaryBin> salryList){
+    public SalaryAdapter(List<SalaryBin> salryList){
          this.salryList=salryList;
     }
 

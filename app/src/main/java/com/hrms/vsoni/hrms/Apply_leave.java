@@ -21,24 +21,23 @@ public class Apply_leave extends AppCompatActivity implements DatePickerDialog.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.apply_leave);
-        Button button1=(Button)findViewById(R.id.req_to_date);
-        Button button2=(Button)findViewById(R.id.req_from_date);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                android.support.v4.app.DialogFragment datePicker =new DatePickerFragment();
-                datePicker.show(getSupportFragmentManager(),"date Picker");
-            }
-        });
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                android.support.v4.app.DialogFragment datePicker =new DatePickerFragment();
-                datePicker.show(getSupportFragmentManager(),"date Picker2");
-                 fired=true;
-            }
-
-        });
+//        //        Button button2=(Button)findViewById(R.id.req_from_date);
+//        //button1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                android.support.v4.app.DialogFragment datePicker =new DatePickerFragment();
+//                datePicker.show(getSupportFragmentManager(),"date Picker");
+//            }
+//        });
+//        button2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                android.support.v4.app.DialogFragment datePicker =new DatePickerFragment();
+//                datePicker.show(getSupportFragmentManager(),"date Picker2");
+//                 fired=true;
+//            }
+//
+//        });
 
 
     }

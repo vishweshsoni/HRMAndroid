@@ -18,7 +18,7 @@ import java.util.List;
 
 public class salary extends Fragment {
 //    recyclerView=(RecyclerView) getView().findViewById(R.id.recycler_view);
-//    salary_adapter=new Salary_Adapter(salarylist);
+//    salary_adapter=new SalaryAdapter(salarylist);
 //    RecyclerView.LayoutManager mLayoutManager=new LinearLayoutManager(getActivity().getApplicationContext());
 //        recyclerView.setLayoutManager(mLayoutManager);
 //        recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -29,14 +29,14 @@ public class salary extends Fragment {
 
     private RecyclerView recyclerView;
 
-    private Salary_Adapter salary_adapter;
+    private SalaryAdapter salary_adapter;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
          View view=inflater.inflate(R.layout.fragment_salary,container,false);
 
          recyclerView=(RecyclerView) view.findViewById(R.id.recycler_view);
-        salary_adapter=new Salary_Adapter(salarylist);
+        salary_adapter=new SalaryAdapter(salarylist);
     RecyclerView.LayoutManager mLayoutManager=new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());

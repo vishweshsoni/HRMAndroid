@@ -35,6 +35,7 @@ public class home extends Fragment{
         Fragment fr=new Fragment();
         FragmentManager manager=getActivity().getSupportFragmentManager();
         FragmentTransaction transaction=manager.beginTransaction();
+//      transaction.replace(R.id.leave_status, fr);
         transaction.replace(R.id.leave_status, fr);
         transaction.addToBackStack(null);
         transaction.commit();
@@ -60,8 +61,11 @@ public class home extends Fragment{
         ll_leavestatsus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LeaveStatus leaveStatus=LeaveStatus.newInstance();
-                replaceFragment(leaveStatus);
+//                LeaveApplication leaveApplication=LeaveApplication.newInstance();
+//                replaceFragment(leaveApplication);
+                ApplyLeaveFragment applyLeaveFragment=ApplyLeaveFragment.getInstance();
+                 replaceFragment(applyLeaveFragment);
+
 
             }
         });

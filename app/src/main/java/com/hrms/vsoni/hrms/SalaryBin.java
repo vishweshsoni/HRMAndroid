@@ -4,6 +4,7 @@ package com.hrms.vsoni.hrms;
  * Created by vishwesh on 23/1/18.
  */
 
+
 public class SalaryBin {
     private String Month,Year,Rupees;
     public SalaryBin(){}
@@ -22,6 +23,7 @@ public class SalaryBin {
     public String getYear() {
         return Year;
     }
+
 
     public void setYear(String year) {
         Year = year;

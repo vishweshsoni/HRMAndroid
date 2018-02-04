@@ -41,5 +41,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+   <!--spinner array-->
+        <string-array name="typeOfLeaveArray">
+        <item>Type of Leave</item>
+        <item>SickLeave</item>
+        <item>CasualLeave</item>
+        <item>PrivilegeLeave</item>
 
+    </string-array>
 </resources>

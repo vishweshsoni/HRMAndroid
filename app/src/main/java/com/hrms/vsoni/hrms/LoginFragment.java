@@ -18,7 +18,7 @@ public class LoginFragment extends Fragment {
 
     private TextInputLayout textInputLayoutUsername;
     private TextInputLayout textInputLayoutPassword;
-    public static LoginFragment getInstance (){
+        public static LoginFragment getInstance (){
         return new LoginFragment();
     }
     @Nullable

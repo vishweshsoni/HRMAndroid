@@ -1,57 +1,69 @@
 package com.hrms.vsoni.hrms;
 
-import android.app.Activity;
-import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by HSoni on 1/7/2018.
+ * Created by vishwesh on 23/1/18.
  */
 
-public class LeaveApplicationListAdapter extends ArrayAdapter<String> {
-    ArrayList<String> list;
-    Activity context;
-    holder holder;
-    private static class holder {
-        TextView textViewTitle;
+public class LeaveApplicationListAdapter extends RecyclerView.Adapter<LeaveApplicationListAdapter.MyViewHolder> {
+    private List<LeaveAppBean> listLeaveApp;
+    public class MyViewHolder extends RecyclerView.ViewHolder{
+        public TextView txtLeaveAppNumber,txtLeaveAppStartDate,txtLeaveAppEndDate,txtLeaveAppManager
+                 ,txtLeaveApptype,txtLeaveAppNumberOfLeaves,txtLeaveAppStatus;
+
+
+        public MyViewHolder(View itemView) {
+            super(itemView);
+            txtLeaveAppNumber=(TextView)itemView.findViewById(R.id.txtLeaveAppNumber);
+            txtLeaveAppStartDate=(TextView)itemView.findViewById(R.id.txtLeaveAppStartDate);
+            txtLeaveAppEndDate=(TextView)itemView.findViewById(R.id.txtLeaveAppEndDate);
+            txtLeaveAppManager=(TextView)itemView.findViewById(R.id.txtLeaveAppManager);
+            txtLeaveApptype=(TextView)itemView.findViewById(R.id.txtLeaveApptype);
+            txtLeaveAppNumberOfLeaves=(TextView)itemView.findViewById(R.id.txtLeaveAppNumberOfLeaves);
+            txtLeaveAppStatus=(TextView)itemView.findViewById(R.id.txtLeaveAppStatus);
+
+
+
+        }
     }
 
-    public LeaveApplicationListAdapter(Activity context, int resourceId, ArrayList<String> list){
-        super (context , resourceId);
-        this.context = context;
-        this.list = list;
-
-    }
-    @NonNull
-    @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View rootView = convertView;
-        LayoutInflater inflater = context.getLayoutInflater();
-        if (rootView == null){
-            rootView = inflater.inflate(R.layout.leave_app_item, null);
-            holder = new holder();
-            holder.textViewTitle = (TextView) rootView.findViewById(R.id.txtTitle);
-            rootView.setTag(holder);
-        }
-        else {
-            holder = (holder) rootView.getTag();
-        }
-
-        holder.textViewTitle.setText(list.get(position));
-        return rootView;
+    public LeaveApplicationListAdapter(List<LeaveAppBean> listLeaveApp){
+        this.listLeaveApp = listLeaveApp;
     }
 
     @Override
-    public int getCount() {
-        return list.size();
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView= LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.leave_application_item,parent,false);
+
+        return new MyViewHolder(itemView);
+
+    }
+
+    @Override
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        LeaveAppBean leaveAppBean= listLeaveApp.get(position);
+        holder.txtLeaveAppNumber.setText(leaveAppBean.getLeaveAppNumber());
+        holder.txtLeaveAppStartDate.setText(leaveAppBean.getStartDate());
+        holder.txtLeaveAppEndDate.setText(leaveAppBean.getEndDate());
+        holder.txtLeaveAppManager.setText(leaveAppBean.getMgrName());
+        holder.txtLeaveApptype.setText(leaveAppBean.getTypeOfLeave());
+        holder.txtLeaveAppNumberOfLeaves.setText(leaveAppBean.getLeaveAppNumber());
+        holder.txtLeaveAppStatus.setText(leaveAppBean.getStatus());
+
+
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return listLeaveApp.size();
     }
 }
