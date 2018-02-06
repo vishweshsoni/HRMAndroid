@@ -63,8 +63,8 @@ public class LeaveStatus extends Fragment implements BackgroundLeaveStatus.goBac
         params.put("emp_id","1");
 //            params.put("policy_id","STD009");
         Httpcall httpCall = new Httpcall();
-        httpCall.setParams(params);
-        BackgroundLeaveStatus bg_ls=new BackgroundLeaveStatus(this);
+            httpCall.setParams(params);
+        BackgroundWorker bg_ls=new BackgroundWorker(this);
         bg_ls.execute(httpCall);
 
 

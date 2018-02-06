@@ -27,11 +27,11 @@ public class LoginActivity extends AppCompatActivity {
 
         String username=e1.getText().toString();
         String password=e2.getText().toString();
-        Intent i=new Intent(this,HomeMainActivity.class);
-        startActivity(i);
-        BackgroundWorker backgroundWorker=new BackgroundWorker();
-
-        backgroundWorker.execute(username,password,null);
+//        Intent i=new Intent(this,HomeMainActivity.class);
+//        startActivity(i);
+//        BackgroundWorker backgroundWorker=new BackgroundWorker();
+//
+//        backgroundWorker.execute(username,password,null);
 
     }
 

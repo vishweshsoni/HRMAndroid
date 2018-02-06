@@ -45,7 +45,6 @@ public class ApplyLeaveFragment extends Fragment implements AdapterView.OnItemSe
 
 
 
-
     public static ApplyLeaveFragment getInstance(){
         return new ApplyLeaveFragment();
     }
