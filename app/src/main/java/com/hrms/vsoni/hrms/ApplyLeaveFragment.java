@@ -1,10 +1,13 @@
 package com.hrms.vsoni.hrms;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
+import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,13 +23,17 @@ import android.widget.Toast;
 
 import java.lang.reflect.Type;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.Year;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
 
 /**
  * Created by vishwesh on 4/2/18.
  */
 
-public class ApplyLeaveFragment extends Fragment implements AdapterView.OnItemSelectedListener{
+public class ApplyLeaveFragment extends Fragment implements AdapterView.OnItemSelectedListener,BackgrounndApplyLeave.goBackToParentFragment{
      View view;
      //declaration part
     boolean fired=false;
@@ -116,19 +123,63 @@ public class ApplyLeaveFragment extends Fragment implements AdapterView.OnItemSe
 
                         toDateTextView.setText(String.valueOf(dayOfMonth)+"/"+String.valueOf(month+1)+"/"
                         +String.valueOf(year));
-                     req_to_Date= DateFormat.getDateInstance().format(c.getTime());
-
-                          }
+                        
+                     populatetoDate(year, month + 1, dayOfMonth);
+                                      }
                         else{
                              fromDateTextView.setText(String.valueOf(dayOfMonth)+"/"+String.valueOf(month+1)+"/"
                              +String.valueOf(year));
-                     req_from_Date= DateFormat.getDateInstance().format(c.getTime());
+                     populatefromDate(year, month + 1, dayOfMonth);
 
                          }
 
                     }
 
                   };
+
+    public void populatefromDate(int year, int month, int day) {
+        String formattedDay = (String.valueOf(day));
+        String formattedMonth = (String.valueOf(month));
+        String formattedYear=(String.valueOf(year));
+        if (day < 10) {
+            formattedDay = "0" + day;
+        }
+
+        if (month < 10) {
+            formattedMonth = "0" + month;
+        }
+        req_from_Date=formattedYear+"-"+formattedMonth+"-"+formattedDay;
+        Log.d("req_from_day",req_from_Date);
+
+
+
+
+
+
+    }
+
+
+
+    public void populatetoDate(int year, int month, int day) {
+        String formattedDay = (String.valueOf(day));
+        String formattedMonth = (String.valueOf(month));
+        String formattedYear=(String.valueOf(year));
+        if (day < 10) {
+            formattedDay = "0" + day;
+        }
+
+        if (month < 10) {
+            formattedMonth = "0" + month;
+        }
+        req_to_Date=formattedYear+"-"+formattedMonth+"-"+formattedDay;
+        Log.d("req_to_date",req_to_Date);
+
+
+    }
+
+
+
+
 
 
     @Override
@@ -153,9 +204,55 @@ public class ApplyLeaveFragment extends Fragment implements AdapterView.OnItemSe
         if(pos==true){
             spinner.requestFocus();
             spinner.setSelected(true);
-            Toast.makeText(getActivity(),"plese select leave type",Toast.LENGTH_LONG).show();
+            //Toast.makeText(getActivity(),"plese select leave type",Toast.LENGTH_LONG).show();
             pos=false;
         }
+        HashMap<String,String> params=new HashMap<>();
+        params.put("typeOfLeave",TypeLeave);
+        params.put("req_from_date",req_from_Date);
+        params.put("req_to_date",req_to_Date);
+        params.put("emp_id","1");
+        Httpcall httpCall = new Httpcall();
+        httpCall.setParams(params);
 
+
+        BackgrounndApplyLeave backgrounndApplyLeave=new BackgrounndApplyLeave(ApplyLeaveFragment.this);
+        backgrounndApplyLeave.execute(httpCall);
+
+
+
+    }
+
+    @Override
+    public void setResponse(String s) {
+        new AlertDialog.Builder(getActivity(),android.R.style.Theme_DeviceDefault_Light_Dialog)
+                .setTitle("Applied")
+                .setMessage(s)
+                .setCancelable(true)
+                .setPositiveButton("Ok",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int which) {
+                                // Write your code here to execute after dialog
+
+                            }
+                        })
+                .show();
+
+    }
+
+    @Override
+    public void showError(String message) {
+        new AlertDialog.Builder(getActivity(),android.R.style.Theme_DeviceDefault_Light_Dialog)
+                .setTitle("Error")
+                .setMessage(message)
+                .setCancelable(true)
+                .setPositiveButton("Ok",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int which) {
+                                // Write your code here to execute after dialog
+
+                            }
+                        })
+                .show();
     }
 }

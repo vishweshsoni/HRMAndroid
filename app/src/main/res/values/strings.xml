@@ -5,6 +5,8 @@
     <string name="nav_attendance">Attendance</string>
     <string name="res_signup">Sign up</string>
     <string name="res_login">Login</string>
+    <string name="res_Leavestatus">Leavestatus</string>
+    <string name="res_ApplyLeave">ApplyLeave</string>>
     <string name="res_useroremail">Username or E-mail</string>
     <string name="res_password">Password</string>
     <string name="res_email">E-mail</string>
@@ -44,9 +46,9 @@
    <!--spinner array-->
         <string-array name="typeOfLeaveArray">
         <item>Type of Leave</item>
-        <item>SickLeave</item>
-        <item>CasualLeave</item>
-        <item>PrivilegeLeave</item>
+        <item>Sick</item>
+        <item>Casual</item>
+        <item>Privillage</item>
 
     </string-array>
 </resources>

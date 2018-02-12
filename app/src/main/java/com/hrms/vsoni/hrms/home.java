@@ -63,9 +63,11 @@ public class home extends Fragment{
             public void onClick(View view) {
 //                LeaveApplication leaveApplication=LeaveApplication.newInstance();
 //                replaceFragment(leaveApplication);
-                ApplyLeaveFragment applyLeaveFragment=ApplyLeaveFragment.getInstance();
-                 replaceFragment(applyLeaveFragment);
+//                ApplyLeaveFragment applyLeaveFragment=ApplyLeaveFragment.getInstance();
+//                 replaceFragment(applyLeaveFragment);
 
+                        Intent i=new Intent(getActivity(),FinalLeave.class);
+                        startActivity(i);
 
             }
         });

@@ -70,7 +70,9 @@ public class BackgroundSignup extends AsyncTask<Httpcall,String,String> {
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
-            urlConnection.disconnect();
+            if(urlConnection!=null)
+            {urlConnection.disconnect();}
+
         }
          String res=response.toString();
 

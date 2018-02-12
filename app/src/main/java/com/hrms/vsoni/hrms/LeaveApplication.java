@@ -20,7 +20,9 @@ import java.util.List;
  */
 
 public class LeaveApplication extends Fragment{
-
+    public static  LeaveApplication getInstance(){
+        return new LeaveApplication();
+    }
     private List<LeaveAppBean> leaveAppList=new ArrayList<>();
     private RecyclerView rcyLeaveAppList;
     private LeaveApplicationListAdapter leaveApplicationListAdapter;

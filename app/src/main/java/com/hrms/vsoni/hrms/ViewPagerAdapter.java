@@ -1,6 +1,7 @@
 package com.hrms.vsoni.hrms;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     private int mNumOfFragments;
 
 
-    public ViewPagerAdapter(android.support.v4.app.FragmentManager fm, ArrayList<Fragment> fragmentsList, ArrayList<String> titlesList) {
+    public ViewPagerAdapter(FragmentManager fm, ArrayList<Fragment> fragmentsList, ArrayList<String> titlesList) {
         super(fm);
         mFragmentsList = fragmentsList;
         mTitles = titlesList;

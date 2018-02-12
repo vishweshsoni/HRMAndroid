@@ -35,6 +35,7 @@
             -->
 
         </activity>
+        <activity android:name=".FinalLeave"/>
         <activity android:name=".signup" />
         <activity android:name=".Apply_leave" />
         <activity android:name=".MainActivity">

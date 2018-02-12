@@ -8,22 +8,22 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class FinalLeave extends AppCompatActivity {
     ViewPagerAdapter viewPagerAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_screen);
+        setContentView(R.layout.leave_final);
         ArrayList<Fragment> listOfFragments = new ArrayList<>();
-        listOfFragments.add(LoginFragment.getInstance());
-        listOfFragments.add(SignupFragment.getInstance());
+        listOfFragments.add(LeaveApplication.getInstance());
+        listOfFragments.add(ApplyLeaveFragment.getInstance());
 
         ArrayList<String> listOfTitles = new ArrayList<>();
-        listOfTitles.add(getResources().getString(R.string.res_login));
-        listOfTitles.add(getResources().getString(R.string.res_signup));
-            viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), listOfFragments, listOfTitles);
-        TabLayout tabLayoutMain = (TabLayout) findViewById(R.id.tabLayoutMain);
-        ViewPager viewPager = (ViewPager)findViewById(R.id.viewPagerMain);
+        listOfTitles.add(getResources().getString(R.string.res_Leavestatus));
+        listOfTitles.add(getResources().getString(R.string.res_ApplyLeave));
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), listOfFragments, listOfTitles);
+        TabLayout tabLayoutMain = (TabLayout) findViewById(R.id.tabLayoutLeave);
+        ViewPager viewPager = (ViewPager)findViewById(R.id.viewPagerLeave);
         viewPager.setAdapter(viewPagerAdapter);
         tabLayoutMain.setupWithViewPager(viewPager);
 
