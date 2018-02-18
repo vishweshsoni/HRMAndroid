@@ -46,23 +46,23 @@ public class salary extends Fragment {
         return view;
     }
     private void prepareSalaryData(){
-         SalaryBin salary=new SalaryBin("January","2015","30000");
+         SalaryBin salary=new SalaryBin("January","2017","30000₹");
          salarylist.add(salary);
-         salary =new SalaryBin("January","2015","30000");
+         salary =new SalaryBin("February","2017","30000₹");
         salarylist.add(salary);
-        salary =new SalaryBin("January","2015","30000");
+        salary =new SalaryBin("March","2017","30000₹");
         salarylist.add(salary);
-        salary =new SalaryBin("January","2015","30000");
+        salary =new SalaryBin("April","2017","30000₹");
         salarylist.add(salary);
-        salary =new SalaryBin("January","2015","30000");
+        salary =new SalaryBin("May","2017","30000₹");
         salarylist.add(salary);
-        salary =new SalaryBin("January","2015","30000");
+        salary =new SalaryBin("June","2017","30000₹");
         salarylist.add(salary);
-        salary =new SalaryBin("January","2015","30000");
+        salary =new SalaryBin("July","2017","30000₹");
         salarylist.add(salary);
-        salary =new SalaryBin("January","2015","30000");
+        salary =new SalaryBin("August","2017","30000₹");
         salarylist.add(salary);
-        salary =new SalaryBin("January","2015","30000");
+        salary =new SalaryBin("September","2017","30000₹");
         salarylist.add(salary);
 
         salary_adapter.notifyDataSetChanged();
